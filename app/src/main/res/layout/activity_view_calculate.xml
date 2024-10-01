@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ViewCalculate">
+
+    <ImageView
+            android:src="@mipmap/ic_launcher_money"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+    </ImageView>
+
+    <EditText
+            android:id="@+id/edt_distance"
+            android:layout_marginTop="60dp"
+            android:hint="@string/distance"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </EditText>
+
+    <TextView
+            android:text="Total quilômetros"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    </TextView>
+
+
+    <EditText
+            android:id="@+id/edt_price"
+            android:layout_marginTop="60dp"
+            android:hint="@string/price"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </EditText>
+
+
+    <TextView
+            android:text="@string/price_for_litter"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    </TextView>
+
+    <EditText
+            android:id="@+id/edt_autonomy"
+            android:layout_marginTop="60dp"
+            android:hint="@string/autonomy"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </EditText>
+
+    <TextView
+            android:text="@string/km_for_litter"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+            android:id="@+id/buttonCalculate"
+            android:text="@string/calculate"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="60dp"
+            android:textSize="18sp"
+            app:cornerRadius="4dp"
+            android:backgroundTint="@color/purple"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </Button>
+
+</LinearLayout>
