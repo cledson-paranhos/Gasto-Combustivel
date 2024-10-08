@@ -1,11 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/main"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ViewResult">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+            android:drawableEnd="@color/white"
+            android:text="Resultado do Calculo Gasto"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/montserrat_medium"
+            android:background="@drawable/circular_border"
+            android:paddingStart="35dp"
+            android:paddingEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+    </TextView>
+
+    <LinearLayout
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="Origem: "
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+                android:id="@+id/text_result_origem"
+                android:text=""
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="Destino: "
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+                android:id="@+id/text_result_destino"
+                android:text=""
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="Distância Total: "
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+                android:id="@+id/text_resul_distance"
+                android:text=""
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="24sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+            android:text="Seu gasto total será de:"
+            android:fontFamily="@font/montserrat_medium"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+            android:id="@+id/text_result"
+            android:text="@string/result"
+            android:fontFamily="@font/montserrat_medium"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    </TextView>
+
+
+</LinearLayout>

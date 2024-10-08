@@ -1,9 +1,11 @@
 package com.example.gastocombustivel
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -27,6 +29,19 @@ class ViewCalculate : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         if (view.id == R.id.buttonCalculate) {
             calculate()
+            var dadosRecuperados = intent.extras
+            var origin= dadosRecuperados?.getString("origin")
+            var destination= dadosRecuperados?.getString("destination")
+
+            var intent = Intent(this, ViewResult::class.java)
+            intent.putExtra("distance", binding.edtDistance.text.toString().toDouble())
+            intent.putExtra("price", binding.edtPrice.text.toString().toDouble())
+            intent.putExtra("autonomy", binding.edtAutonomy.text.toString().toDouble())
+            intent.putExtra("origin", origin)
+            intent.putExtra("destination", destination)
+            intent.putExtra("total", this.valueTotalCalculate)
+
+            startActivity(intent)
         }
     }
 
@@ -36,7 +51,12 @@ class ViewCalculate : AppCompatActivity(), View.OnClickListener {
             var price = binding.edtPrice.text.toString().toDouble()
             var autonomy = binding.edtAutonomy.text.toString().toDouble()
 
-            this.valueTotalCalculate = (distance * price) / autonomy
+            if (binding.checkboxCalcTotal.isChecked){
+                this.valueTotalCalculate = ((distance * price) / autonomy) * 2.0
+            }else
+            {
+                this.valueTotalCalculate = (distance * price) / autonomy
+            }
         } else {
             Toast.makeText(this, "Valores inseridos inválidos!", Toast.LENGTH_SHORT).show()
         }
