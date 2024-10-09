@@ -12,4 +12,7 @@
     <string name="km_for_litter">Km por litro</string>
     <string name="calculate">Calcular</string>
     <string name="result">R$: 0</string>
+    <string name="destination_result">📍Destino:</string>
+    <string name="distance_total_result">🛣️Distância Total:</string>
+    <string name="label_total">Seu gasto total será de:</string>
 </resources>

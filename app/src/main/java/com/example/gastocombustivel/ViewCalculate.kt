@@ -21,19 +21,25 @@ class ViewCalculate : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityViewCalculateBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
+
         binding.buttonCalculate.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
         if (view.id == R.id.buttonCalculate) {
             calculate()
+
             var dadosRecuperados = intent.extras
-            var origin= dadosRecuperados?.getString("origin")
-            var destination= dadosRecuperados?.getString("destination")
+
+            var origin = dadosRecuperados?.getString("origin")
+            var destination = dadosRecuperados?.getString("destination")
 
             var intent = Intent(this, ViewResult::class.java)
+
             intent.putExtra("distance", binding.edtDistance.text.toString().toDouble())
             intent.putExtra("price", binding.edtPrice.text.toString().toDouble())
             intent.putExtra("autonomy", binding.edtAutonomy.text.toString().toDouble())
@@ -51,10 +57,9 @@ class ViewCalculate : AppCompatActivity(), View.OnClickListener {
             var price = binding.edtPrice.text.toString().toDouble()
             var autonomy = binding.edtAutonomy.text.toString().toDouble()
 
-            if (binding.checkboxCalcTotal.isChecked){
+            if (binding.checkboxCalcTotal.isChecked) {
                 this.valueTotalCalculate = ((distance * price) / autonomy) * 2.0
-            }else
-            {
+            } else {
                 this.valueTotalCalculate = (distance * price) / autonomy
             }
         } else {

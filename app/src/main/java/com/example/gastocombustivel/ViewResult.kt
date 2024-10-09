@@ -10,10 +10,12 @@ class ViewResult : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityViewResultBinding.inflate(layoutInflater)
 
         var resultDados = intent.extras
         var total = resultDados?.getDouble("total")
+
         binding.textResultOrigem.text = resultDados?.getString("origin")
         binding.textResultDestino.text = resultDados?.getString("destination")
         binding.textResulDistance.text= resultDados?.getDouble("distance").toString()

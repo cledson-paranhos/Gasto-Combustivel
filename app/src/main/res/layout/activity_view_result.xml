@@ -11,11 +11,11 @@
 
     <TextView
             android:drawableEnd="@color/white"
-            android:text="Resultado do Calculo Gasto"
+            android:text="  Resultado do Cálculo 💰"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:gravity="center_vertical"
+            android:gravity="center_horizontal|center"
             android:fontFamily="@font/montserrat_medium"
             android:background="@drawable/circular_border"
             android:paddingStart="35dp"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <TextView
-                android:text="Origem: "
+                android:text="📍Origem: "
                 android:fontFamily="@font/montserrat_medium"
                 android:textSize="24sp"
                 android:layout_marginTop="40dp"
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <TextView
-                android:text="Destino: "
+                android:text="@string/destination_result"
                 android:fontFamily="@font/montserrat_medium"
                 android:textSize="24sp"
                 android:layout_marginTop="40dp"
@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <TextView
-                android:text="Distância Total: "
+                android:text="@string/distance_total_result"
                 android:fontFamily="@font/montserrat_medium"
                 android:textSize="24sp"
                 android:layout_marginTop="40dp"
@@ -116,7 +116,7 @@
     </LinearLayout>
 
     <TextView
-            android:text="Seu gasto total será de:"
+            android:text="@string/label_total"
             android:fontFamily="@font/montserrat_medium"
             android:textAllCaps="true"
             android:layout_gravity="center"
