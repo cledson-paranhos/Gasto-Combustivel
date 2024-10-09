@@ -18,6 +18,7 @@ import kotlin.toString
 class ViewCalculate : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityViewCalculateBinding
     var valueTotalCalculate = 0.0
+    var distance = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,9 +39,15 @@ class ViewCalculate : AppCompatActivity(), View.OnClickListener {
             var origin = dadosRecuperados?.getString("origin")
             var destination = dadosRecuperados?.getString("destination")
 
+            if (binding.checkboxCalcTotal.isChecked){
+                distance = binding.edtDistance.text.toString().toDouble() * 2.0
+            }else{
+                distance = binding.edtDistance.text.toString().toDouble()
+            }
+
             var intent = Intent(this, ViewResult::class.java)
 
-            intent.putExtra("distance", binding.edtDistance.text.toString().toDouble())
+            intent.putExtra("distance", distance)
             intent.putExtra("price", binding.edtPrice.text.toString().toDouble())
             intent.putExtra("autonomy", binding.edtAutonomy.text.toString().toDouble())
             intent.putExtra("origin", origin)
